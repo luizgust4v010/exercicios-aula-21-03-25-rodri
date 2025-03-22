@@ -2,25 +2,38 @@
 using namespace std;
 
 int main() {
-    const int TAMANHO = 10;
-    int A[TAMANHO], M[TAMANHO];
-    int X;
+    int N;
 
 
-    cout << "Digite 10 números para o vetor A:" << endl;
-    for (int i = 0; i < TAMANHO; i++) {
+    cout << "Digite o tamanho dos vetores (N): ";
+    cin >> N;
+
+    int A[N], B[N], Soma[N];
+
+
+    cout << "Digite os elementos do vetor A:" << endl;
+    for (int i = 0; i < N; i++) {
         cout << "A[" << i << "]: ";
         cin >> A[i];
     }
 
 
-    cout << "\nDigite o valor de X: ";
-    cin >> X;
-
-
-    for (int i = 0; i < TAMANHO; i++) {
-        M[i] = A[i] * X;
+    cout << "Digite os elementos do vetor B:" << endl;
+    for (int i = 0; i < N; i++) {
+        cout << "B[" << i << "]: ";
+        cin >> B[i];
     }
 
 
-    cout << "\nVetor M (resultado da multiplicação):" << endl
+    for (int i = 0; i < N; i++) {
+        Soma[i] = A[i] + B[i];
+    }
+
+
+    cout << "\nVetor Soma (resultado da soma de A e B):" << endl;
+    for (int i = 0; i < N; i++) {
+        cout << "Soma[" << i << "] = " << Soma[i] << endl;
+    }
+
+    return 0;
+}
