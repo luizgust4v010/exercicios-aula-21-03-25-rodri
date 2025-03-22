@@ -1,47 +1,26 @@
 #include <iostream>
-
 using namespace std;
 
-int main()
-{
-    string  nome[3];
+int main() {
+    const int TAMANHO = 10;
+    int A[TAMANHO], M[TAMANHO];
+    int X;
 
-    for (int i = 0; i < 3; i++)
-    {
-        cout << " digite o nome " << i + 1 << " : ";
-        cin >> nome[i];
+
+    cout << "Digite 10 números para o vetor A:" << endl;
+    for (int i = 0; i < TAMANHO; i++) {
+        cout << "A[" << i << "]: ";
+        cin >> A[i];
     }
 
-    string nomeProcurado;
 
-    cout << " digite o nome a ser procurado: ";
-    cin >> nomeProcurado;
+    cout << "\nDigite o valor de X: ";
+    cin >> X;
 
-    bool encontrado = false;
 
-    for(int i = 0; i < 3; i++){
-        if (nome[i] == nomeProcurado){
-            encontrado = false;
-            break;
-        }
+    for (int i = 0; i < TAMANHO; i++) {
+        M[i] = A[i] * X;
     }
 
-    if (encontrado = false ){
-        cout << " nao achei " << endl;
-    }else {
-        cout << " achei " << endl;
 
-    }
-    return 0;
-
-
-
-
-
-
-
-
-
-
-
-}
+    cout << "\nVetor M (resultado da multiplicação):" << endl
